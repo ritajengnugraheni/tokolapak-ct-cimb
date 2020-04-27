@@ -45,7 +45,8 @@ class AuthScreen extends React.Component {
                             <ButtonUI type="auth" className="mt-5 mb-5" onClick={this.showRegister}>Register</ButtonUI> <br />
                             <ButtonUI type="auth" className="mt-5 mb-5" onClick={this.showLogin}>Login</ButtonUI>
                         </div>
-                        {this.showLogin()}
+                        {this.showLogin}
+                        {this.showRegister}
                         {/* <div>
                             <h3>Log In</h3>
                             <p className="mt-4">Welcome back. <br />
@@ -62,7 +63,7 @@ class AuthScreen extends React.Component {
                     <div className="row mt-5">
                         <div className="col-5">
                            
-                            {this.showRegister()}
+                           
                             {/* <div>
                                 <h3>Register</h3>
                                 <p className="mt-4">You will get the best recommendation for rent <br />
