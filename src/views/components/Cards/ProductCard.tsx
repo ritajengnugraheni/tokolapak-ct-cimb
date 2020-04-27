@@ -43,13 +43,13 @@ class ProductCard extends React.Component<ProductCardProps> {
               <small className="ml-2">4.5</small>
             </div>
           </div>
-          {/* <ButtonUI
+          <ButtonUI
             type="outlined"
-            style={{ fontSize: "12px", padding: "4px 8px" }}
+            style={{ fontSize: "12px", padding: "4px 8px" }} onClick ={null}
           >
             {" "}
             <FontAwesomeIcon icon={faHeart} /> Add to wishlist
-          </ButtonUI> */}
+          </ButtonUI>
         </div>
       </div>
     );

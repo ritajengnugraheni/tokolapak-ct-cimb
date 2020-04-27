@@ -2,13 +2,14 @@ import Axios from "axios";
 import { API_URL } from "../../constants/API";
 import Cookie from "universal-cookie";
 import userTypes from "../types/user"
+import swal from "sweetalert";
 
 const {ON_LOGIN_SUCCESS,ON_LOGIN_FAIL,ON_LOGOUT_SUCCESS} = userTypes
 
 const cookieObj = new Cookie();
 
 
-export const loginHandler = (userData) => {
+export const LoginHandler = (userData) => {
   return (dispatch) => {
     const { username, password } = userData;
 
@@ -31,12 +32,13 @@ export const loginHandler = (userData) => {
             //   role
             // }
           });
+          swal("Welcome", "", "success")
         } else {
-          alert("masuk");
           dispatch({
             type: ON_LOGIN_FAIL,
-            payload: "Username atau password salah",
+            payload: "",
           });
+          swal("Username atau password salah", "", "error")
         }
       })
       .catch((err) => {
@@ -85,7 +87,7 @@ export const logoutHandler = () => {
   };
 };
 
-export const registerHandler =(userData)=>{
+export const RegisterHandler =(userData)=>{
     return (dispatch) => {
         Axios.get (`${API_URL}/users`, {
             params : {
@@ -96,8 +98,10 @@ export const registerHandler =(userData)=>{
             if (res.data.length > 0) {
                 dispatch ({
                     type :"ON_REGISTER_FAIL",
-                    payload:"Username sudah digunakan "
+                    payload:""
                 })
+                swal("Username sudah digunakan", "", "error")
+
             } else {
                 Axios.post(`${API_URL}/users`, userData)
                 .then(res =>{
@@ -106,6 +110,7 @@ export const registerHandler =(userData)=>{
                         type:ON_LOGIN_SUCCESS,
                         payload: res.data
                     })
+                    swal("Akun anda sudah terdaftar", "", "success")
                     
                 })
                 .catch(err => {

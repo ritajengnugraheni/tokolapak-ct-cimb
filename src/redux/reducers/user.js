@@ -25,13 +25,7 @@ export default (state = init_state, action) => {
         id
       }
     case ON_LOGIN_FAIL:
-      return {
-        ...state,
-        username,
-        fullName,
-        role,
-        id
-      }
+      return { ...state,errMsg : action.payload }
     case "ON_REGISTER_FAIL":
       return {
         ...state, errMsg: action.payload

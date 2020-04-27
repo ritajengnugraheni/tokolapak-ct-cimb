@@ -1,3 +1,25 @@
 {
-    "users" : []
+  "users": [
+    {
+      "username": "ajeng",
+      "password": "password",
+      "fullName": "Rita Ajeng Nugarheni",
+      "address": "Bandung",
+      "id": 1
+    },
+    {
+      "username": "kunto",
+      "password": "password",
+      "fullName": "Sidik Kunto",
+      "address": "Balikpapan",
+      "id": 2
+    },
+    {
+      "username": "mulat",
+      "password": "password",
+      "fullName": "Mulat Wening",
+      "address": "Bekasi",
+      "id": 3
+    }
+  ]
 }
