@@ -2,6 +2,7 @@
   --accent-default: #3c64b1;
   --accent-dark: #1e4693;
   --accent-light: #5a82cf;
+  --accent-btn-log-active :#373F41;
 }
 
 .custom-btn {
@@ -67,3 +68,23 @@
 .custom-btn-textual:active {
   color: var(--accent-dark);
 }
+
+
+.custom-btn-auth {
+  border: 1px solid #E2E5E6;
+  background-color: white;
+  color:#373F41;
+  /* color: white; 
+  border: 1px solid white ;
+  background-color: #373F41; */
+}
+.custom-btn-auth:hover {
+  color: #373F41; 
+  border: 1px solid #E2E5E6;
+}
+.custom-btn-auth:active {
+  color: white; 
+  border: 1px solid white ;
+  background-color: #373F41;
+}
+

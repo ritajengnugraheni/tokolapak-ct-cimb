@@ -2,10 +2,11 @@ import React, { CSSProperties } from "react";
 import "./Button.css";
 
 type ButtonTypes = {
-  type?: "contained" | "outlined" | "textual";
+  type?: "contained" | "outlined" | "textual" |"auth";
   children: any;
   style?: CSSProperties;
   className?: string;
+  Onclick?:any;
 };
 
 const ButtonUI = (props: ButtonTypes) => {
@@ -14,7 +15,7 @@ const ButtonUI = (props: ButtonTypes) => {
   type = type || "contained";
 
   return (
-    <div style={style} className={`custom-btn custom-btn-${type} ${className}`}>
+    <div style={style} className={`custom-btn custom-btn-${type} ${className} ${onclick}`}>
       {children}
     </div>
   );
