@@ -64,18 +64,18 @@ class AuthScreen extends React.Component {
             <div className="container">
                 <div className="row mt-5">
                     <div className="col-5">
-                        <div className="d-flex justify-content-center">
-                            <ButtonUI type="auth" className="mt-5 mb-5" onClick={this.conditionFormRegister} >Register</ButtonUI>
-                            <ButtonUI type="auth" className="mt-5 mb-5" onClick={this.conditionFormLogin}>Login</ButtonUI>
-                        </div>
+
                         {
                             (this.state.condition) ? ((!this.props.user.id) ? (
                                 <div>
+                                    <div className="d-flex justify-content-center">
+                                        <ButtonUI type="auth" className="mt-5 mb-5" onClick={this.conditionFormRegister}  >Register</ButtonUI>
+                                        <ButtonUI type="auth" className="mt-5 mb-5" onClick={this.conditionFormLogin} style={{ backgroundColor: "#373F41", color: "white" }}  >Login</ButtonUI>
+                                    </div>
                                     <h3 >Log In</h3>
                                     <p className="mt-4">
                                         Welcome Back.
                                 <br />Please, Login to your account</p>
-                                    <p>{this.props.user.errMsg}</p>
                                     <TextField
                                         placeholder="Username"
                                         className="mt-5"
@@ -100,6 +100,10 @@ class AuthScreen extends React.Component {
 
                             ) : (
                                     <div>
+                                        <div className="d-flex justify-content-center">
+                                            <ButtonUI type="auth" className="mt-5 mb-5" onClick={this.conditionFormRegister} style={{ backgroundColor: "#373F41", color: "white" }} >Register</ButtonUI>
+                                            <ButtonUI type="auth" className="mt-5 mb-5" onClick={this.conditionFormLogin}>Login</ButtonUI>
+                                        </div>
                                         <h3>Register</h3>
                                         <p className="mt-4">
                                             You will get the best recommendation for rent

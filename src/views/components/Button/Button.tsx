@@ -2,11 +2,11 @@ import React, { CSSProperties } from "react";
 import "./Button.css";
 
 type ButtonTypes = {
-  type?: "contained" | "outlined" | "textual";
+  type?: "contained" | "outlined" | "textual" |"auth";
   children: any;
   style?: CSSProperties;
   className?: string;
-  onClick: any;
+  onClick?: any;
 };
 
 const ButtonUI = (props: ButtonTypes) => {
