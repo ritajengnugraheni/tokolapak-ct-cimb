@@ -46,9 +46,7 @@ const CarouselShowcaseItem = ({
                   borderColor: "#CCEAD7",
                   borderRadius: "16px",
                   fontWeight: "bolder",
-
                 }}
-                onClick= {null}
               >
                 BUY NOW
               </ButtonUI>

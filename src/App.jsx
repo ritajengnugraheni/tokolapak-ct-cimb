@@ -21,8 +21,9 @@ class App extends React.Component {
       let cookieResult = cookieObj.get("authData");
       if (cookieResult) {
         this.props.keepLogin(cookieResult);
+      } else {
+        this.props.cookieChecker();
       }
-      this.props.cookieChecker();
     }, 2000);
   }
 
@@ -36,7 +37,7 @@ class App extends React.Component {
             <Route exact path="/auth" component={AuthScreen} />
             <Route
               exact
-              path="/product/:id"
+              path="/product/:productId"
               component={ProductDetails}
             />
             <Route exact path="/cart" component={Cart} />

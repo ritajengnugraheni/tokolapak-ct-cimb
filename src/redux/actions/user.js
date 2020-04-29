@@ -1,15 +1,13 @@
 import Axios from "axios";
 import { API_URL } from "../../constants/API";
 import Cookie from "universal-cookie";
-import userTypes from "../types/user"
-import swal from "sweetalert";
+import userTypes from "../types/user";
 
-const {ON_LOGIN_SUCCESS,ON_LOGIN_FAIL,ON_LOGOUT_SUCCESS} = userTypes
+const { ON_LOGIN_FAIL, ON_LOGIN_SUCCESS, ON_LOGOUT_SUCCESS } = userTypes;
 
 const cookieObj = new Cookie();
 
-
-export const LoginHandler = (userData) => {
+export const loginHandler = (userData) => {
   return (dispatch) => {
     const { username, password } = userData;
 
@@ -24,21 +22,13 @@ export const LoginHandler = (userData) => {
           dispatch({
             type: ON_LOGIN_SUCCESS,
             payload: res.data[0],
-            // {
-            //   id,
-            //   username,
-            //   password,
-            //   fullName,
-            //   role
-            // }
           });
-          swal("Welcome", "", "success")
         } else {
+          alert("masuk");
           dispatch({
             type: ON_LOGIN_FAIL,
-            payload: "",
+            payload: "Username atau password salah",
           });
-          swal("Username atau password salah", "", "error")
         }
       })
       .catch((err) => {
@@ -57,19 +47,12 @@ export const userKeepLogin = (userData) => {
       .then((res) => {
         if (res.data.length > 0) {
           dispatch({
-            type: "ON_LOGIN_SUCCESS",
+            type: ON_LOGIN_SUCCESS,
             payload: res.data[0],
-            // {
-            //   id,
-            //   username,
-            //   password,
-            //   fullName,
-            //   role
-            // }
           });
         } else {
           dispatch({
-            type: "ON_LOGIN_FAIL",
+            type: ON_LOGIN_FAIL,
             payload: "Username atau password salah",
           });
         }
@@ -83,49 +66,43 @@ export const userKeepLogin = (userData) => {
 export const logoutHandler = () => {
   cookieObj.remove("authData");
   return {
-    type: "ON_LOGOUT_SUCCESS",
+    type: ON_LOGOUT_SUCCESS,
   };
 };
 
-export const RegisterHandler =(userData)=>{
-    return (dispatch) => {
-        Axios.get (`${API_URL}/users`, {
-            params : {
-                username: userData.username
-            }
-        })
-        .then (res=>{
-            if (res.data.length > 0) {
-                dispatch ({
-                    type :"ON_REGISTER_FAIL",
-                    payload:""
-                })
-                swal("Username sudah digunakan", "", "error")
+export const registerHandler = (userData) => {
+  return (dispatch) => {
+    Axios.get(`${API_URL}/users`, {
+      params: {
+        username: userData.username,
+      },
+    })
+      .then((res) => {
+        if (res.data.length > 0) {
+          dispatch({
+            type: "ON_REGISTER_FAIL",
+            payload: "Username sudah digunakan",
+          });
+        } else {
+          Axios.post(`${API_URL}/users`, userData)
+            .then((res) => {
+              console.log(res.data);
+              dispatch({
+                type: ON_LOGIN_SUCCESS,
+                payload: res.data,
+              });
+            })
+            .catch((err) => {
+              console.log(err);
+            });
+        }
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  };
+};
 
-            } else {
-                Axios.post(`${API_URL}/users`, userData)
-                .then(res =>{
-                    console.log(res);
-                    dispatch ({
-                        type:ON_LOGIN_SUCCESS,
-                        payload: res.data
-                    })
-                    swal("Akun anda sudah terdaftar", "", "success")
-                    
-                })
-                .catch(err => {
-                    console.log(err);
-                    
-                })
-            }
-        })
-        .catch (err =>{
-            console.log(err);
-            
-        })
-     
-    }
-}
 export const cookieChecker = () => {
   return {
     type: "COOKIE_CHECK",

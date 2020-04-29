@@ -48,7 +48,7 @@
       "id": 3
     }
   ],
-  "cart": [
+  "carts": [
     {
       "userId": 2,
       "productId": 2,
@@ -62,10 +62,16 @@
       "id": 2
     },
     {
-      "userId": 0,
+      "userId": 1,
       "productId": 1,
       "quantity": 1,
-      "id": 3
+      "id": 4
+    },
+    {
+      "userId": 1,
+      "productId": 1,
+      "quantity": 1,
+      "id": 5
     }
   ]
 }
