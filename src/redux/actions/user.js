@@ -126,3 +126,8 @@ export const RegisterHandler =(userData)=>{
      
     }
 }
+export const cookieChecker = () => {
+  return {
+    type: "COOKIE_CHECK",
+  };
+};
