@@ -30,7 +30,7 @@ class AuthScreen extends React.Component {
   componentDidUpdate() {
     if (this.props.user.id) {
       const cookie = new Cookies();
-      cookie.set("authData", JSON.stringify(this.props.user), {path:"/"});
+      cookie.set("authData", JSON.stringify(this.props.user), { path: "/" });
     }
   }
 
@@ -182,7 +182,7 @@ class AuthScreen extends React.Component {
               <ButtonUI
                 className={`auth-screen-btn ${
                   this.state.activePage == "register" ? "active" : null
-                }`}
+                  }`}
                 type="outlined"
                 onClick={() => this.setState({ activePage: "register" })}
               >
@@ -191,7 +191,7 @@ class AuthScreen extends React.Component {
               <ButtonUI
                 className={`ml-3 auth-screen-btn ${
                   this.state.activePage == "login" ? "active" : null
-                }`}
+                  }`}
                 type="outlined"
                 onClick={() => this.setState({ activePage: "login" })}
               >
