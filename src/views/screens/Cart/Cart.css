@@ -1,0 +1,12 @@
+.btn-delete{
+    color: white !important;
+    background-color: darkred !important;
+    border:1px solid darkred !important;
+}
+.btn-delete:hover {
+    background-color: red !important;
+}
+
+.totalFix {
+    color: #1e4693;
+}

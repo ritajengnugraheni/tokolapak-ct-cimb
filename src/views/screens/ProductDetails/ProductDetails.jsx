@@ -23,19 +23,47 @@ class ProductDetails extends React.Component {
   addToCartHandler = () => {
     //POST ke /cart
     console.log(this.props.user.id);
-    Axios.post(`${API_URL}/carts`, {
+    Axios.get(`${API_URL}/carts`, {
+      params: {
         userId: this.props.user.id,
-        productId: this.state.productData.id,
-        quantity: 1,
+        productId: this.state.productData.id
+      }
     })
-    .then((res) => {
-        console.log(res);
-        swal("", "Your item has been add to your cart", "success")
-    })
-    .catch((err) => {
+      .then((res) => {
+        if (res.data.length == 0) {
+          Axios.post(`${API_URL}/carts`, {
+            userId: this.props.user.id,
+            productId: this.state.productData.id,
+            quantity: 1,
+          })
+            .then((res) => {
+              console.log(res);
+              swal("", "Your item has been add to your cart", "success")
+            })
+            .catch((err) => {
+              console.log(err);
+            })
+
+        } else {
+          Axios.patch(`${API_URL}/carts/${res.data[0].id}`, {
+            quantity: res.data[0].quantity + 1,
+          })
+            .then((res) => {
+              console.log(res);
+              swal("", "Your item has been add to your cart", "success")
+            })
+            .catch((err) => {
+              console.log(err);
+            })
+        }
+      })
+      .catch((err) => {
         console.log(err);
-    })
-}
+        swal('gagal', "", "error")
+
+      })
+
+  }
 
 
 

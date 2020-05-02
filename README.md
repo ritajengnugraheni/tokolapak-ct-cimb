@@ -66,3 +66,20 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/de
 ### `yarn build` fails to minify
 
 This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+
+
+### Rancangan project :
+
+Nama project : Momento.id 
+Spesifikasi :
+
+### Target pengguna
+Merupakan masyarakat yang sedang memerlukan jasa fotografer untuk mengabadikan momennya, kami menyediakan sebuah website yang dapat membantu masyarakat memilih fotografer:
+- user dapat melihat beberapa portofolio dari fotografer yang telah bekerja sama dengan momento.id 
+- fotografer akan membarikan jadwal kosong untuk diinputakan oleh admin 
+- user dapat melakukan booking fotografer sesuai paket dan jadwal yang telah ditentukan 
+- fotografer akan memeperoleh informasi melalui admin
+
+untuk melihat user flow dan information achitecture dapat kunjungi link dibawah ini :
+=== bit.ly/SpesifikasiProject =====
+

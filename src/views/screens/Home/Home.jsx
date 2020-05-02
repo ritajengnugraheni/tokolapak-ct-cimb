@@ -9,6 +9,8 @@ import {
   faHeadset,
 } from "@fortawesome/free-solid-svg-icons";
 import "./Home.css";
+import { connect } from "react-redux";
+import { SearchAndFilterHandler } from "../../../redux/actions"
 
 import ProductCard from "../../components/Cards/ProductCard";
 
@@ -121,11 +123,83 @@ class Home extends React.Component {
       });
   };
 
+  getListTab = () => {
+    // alert('masuk')
+    Axios.get(`${API_URL}/products`, {
+      params: {
+        category: "Tab",
+      }
+    })
+      .then((res) => {
+        console.log(res);
+        this.setState({ bestSellerData: res.data })
+      })
+      .catch((err) => {
+        console.log(err);
+
+      })
+
+  }
+  getListPhone = () => {
+    // alert('masuk')
+    Axios.get(`${API_URL}/products`, {
+      params: {
+        category: "Phone",
+      }
+    })
+      .then((res) => {
+        console.log(res);
+        this.setState({ bestSellerData: res.data })
+      })
+      .catch((err) => {
+        console.log(err);
+
+      })
+
+  }
+  getListLaptop = () => {
+    // alert('masuk')
+    Axios.get(`${API_URL}/products`, {
+      params: {
+        category: "Laptop",
+      }
+    })
+      .then((res) => {
+        console.log(res);
+        this.setState({ bestSellerData: res.data })
+      })
+      .catch((err) => {
+        console.log(err);
+
+      })
+
+  }
+  getListDesktop = () => {
+    // alert('masuk')
+    Axios.get(`${API_URL}/products`, {
+      params: {
+        category: "Desktop",
+      }
+    })
+      .then((res) => {
+        console.log(res);
+        this.setState({ bestSellerData: res.data })
+      })
+      .catch((err) => {
+        console.log(err);
+
+      })
+
+  }
+
   renderProducts = () => {
     return this.state.bestSellerData.map((val) => {
-      return (
-        <ProductCard key={`bestseller-${val.id}`} data={val} className="m-2" />
-      );
+      const { productName } = val
+      if (productName.toLowerCase().startsWith(this.props.user.searchInput.toLowerCase())) {
+        return (
+          <ProductCard key={`bestseller-${val.id}`} data={val} className="m-2" />
+        );
+      }
     });
   };
 
@@ -137,19 +211,20 @@ class Home extends React.Component {
     return (
       <div>
         <div className="d-flex justify-content-center flex-row align-items-center my-3">
-          <Link to="/" style={{ color: "inherit" }}>
+          <Link to="/" style={{ color: "inherit" }} onClick={this.getListPhone}>
             <h6 className="mx-4 font-weight-bold">PHONE</h6>
           </Link>
-          <Link to="/" style={{ color: "inherit" }}>
+          <Link to="/" style={{ color: "inherit" }} onClick={this.getListLaptop}>
             <h6 className="mx-4 font-weight-bold">LAPTOP</h6>
           </Link>
-          <Link to="/" style={{ color: "inherit" }}>
+          <Link to="/" style={{ color: "inherit" }} onClick={this.getListTab}>
             <h6 className="mx-4 font-weight-bold">TAB</h6>
           </Link>
-          <Link to="/" style={{ color: "inherit" }}>
+          <Link to="/" style={{ color: "inherit" }} onClick={this.getListDesktop}>
             <h6 className="mx-4 font-weight-bold">DESKTOP</h6>
           </Link>
         </div>
+        <div>{this.props.user.searchInput}</div>
         <Carousel
           className="carousel-item-home-bg "
           next={this.nextHandler}
@@ -228,5 +303,12 @@ class Home extends React.Component {
     );
   }
 }
-
-export default Home;
+const mapStateToProps = (state) => {
+  return {
+    user: state.user
+  }
+}
+const mapDispatchToProps = {
+  SearchAndFilterHandler
+};
+export default connect(mapStateToProps, mapDispatchToProps)(Home);
