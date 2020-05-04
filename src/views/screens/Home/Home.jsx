@@ -195,9 +195,11 @@ class Home extends React.Component {
   renderProducts = () => {
     return this.state.bestSellerData.map((val) => {
       const { productName } = val
-      if (productName.toLowerCase().startsWith(this.props.user.searchInput.toLowerCase())) {
+      if (productName.toLowerCase().includes(this.props.user.searchInput.toLowerCase())) {
         return (
-          <ProductCard key={`bestseller-${val.id}`} data={val} className="m-2" />
+          <Link to={`/product/${val.id}`}>
+            <ProductCard key={`bestseller-${val.id}`} data={val} className="m-2" />
+          </Link>
         );
       }
     });
@@ -223,8 +225,11 @@ class Home extends React.Component {
           <Link to="/" style={{ color: "inherit" }} onClick={this.getListDesktop}>
             <h6 className="mx-4 font-weight-bold">DESKTOP</h6>
           </Link>
+          <Link to="/" style={{ color: "inherit" }} onClick={this.getBestSellerData}>
+            <h6 className="mx-4 font-weight-bold">ALL</h6>
+          </Link>
         </div>
-        <div>{this.props.user.searchInput}</div>
+        {/* <div>{this.props.user.searchInput}</div> */}
         <Carousel
           className="carousel-item-home-bg "
           next={this.nextHandler}

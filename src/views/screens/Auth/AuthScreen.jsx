@@ -31,6 +31,7 @@ class AuthScreen extends React.Component {
     if (this.props.user.id) {
       const cookie = new Cookies();
       cookie.set("authData", JSON.stringify(this.props.user), { path: "/" });
+      //supaya cokie bisa digunakan di semua page (path nya kenapa / )
     }
   }
 
@@ -42,6 +43,8 @@ class AuthScreen extends React.Component {
         [field]: value,
       },
     });
+
+    console.log(e.target);
 
     // this.setState({ loginForm: {
     //   ...this.state.loginForm,

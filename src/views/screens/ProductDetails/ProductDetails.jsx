@@ -8,6 +8,8 @@ import TextField from "../../components/TextField/TextField";
 import Axios from "axios";
 import { API_URL } from "../../../constants/API";
 
+import { NotificationHandler } from "../../../redux/actions"
+
 class ProductDetails extends React.Component {
   state = {
     productData: {
@@ -18,11 +20,10 @@ class ProductDetails extends React.Component {
       category: "",
       id: 0,
     },
+
   };
 
   addToCartHandler = () => {
-    //POST ke /cart
-    console.log(this.props.user.id);
     Axios.get(`${API_URL}/carts`, {
       params: {
         userId: this.props.user.id,
@@ -30,6 +31,7 @@ class ProductDetails extends React.Component {
       }
     })
       .then((res) => {
+        // this.props.NotificationHandler(this.props.user.id)
         if (res.data.length == 0) {
           Axios.post(`${API_URL}/carts`, {
             userId: this.props.user.id,
@@ -62,10 +64,9 @@ class ProductDetails extends React.Component {
         swal('gagal', "", "error")
 
       })
+    // this.props.NotificationHandler(this.props.user.id)
 
   }
-
-
 
   componentDidMount() {
     Axios.get(`${API_URL}/products/${this.props.match.params.productId}`)
@@ -124,5 +125,7 @@ const mapStateToProps = (state) => {
     user: state.user,
   };
 };
-
-export default connect(mapStateToProps)(ProductDetails);
+const mapDispatchToProps = {
+  NotificationHandler,
+}
+export default connect(mapStateToProps, mapDispatchToProps)(ProductDetails);

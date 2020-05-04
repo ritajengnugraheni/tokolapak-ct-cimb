@@ -2,9 +2,10 @@ import Axios from "axios";
 import { API_URL } from "../../constants/API";
 import Cookie from "universal-cookie";
 import userTypes from "../types/user";
+import swal from "sweetalert";
 
 
-const { ON_LOGIN_FAIL, ON_LOGIN_SUCCESS, ON_LOGOUT_SUCCESS, ON_SEARCHFILTER_SUCCESS } = userTypes;
+const { ON_LOGIN_FAIL, ON_LOGIN_SUCCESS, ON_LOGOUT_SUCCESS, ON_SEARCHFILTER_SUCCESS, ON_NOTIFICATION } = userTypes;
 
 const cookieObj = new Cookie();
 
@@ -24,8 +25,8 @@ export const loginHandler = (userData) => {
             type: ON_LOGIN_SUCCESS,
             payload: res.data[0],
           });
+          swal("Login", "", "success")
         } else {
-          alert("masuk");
           dispatch({
             type: ON_LOGIN_FAIL,
             payload: "Username atau password salah",
@@ -92,6 +93,7 @@ export const registerHandler = (userData) => {
                 type: ON_LOGIN_SUCCESS,
                 payload: res.data,
               });
+              swal("Register", "", "success")
             })
             .catch((err) => {
               console.log(err);
@@ -116,3 +118,37 @@ export const SearchAndFilterHandler = (text) => {
     payload: text,
   }
 }
+
+export const NotificationHandler = (userId) => {
+  // let notification = 1
+  // return (dispatch) => {
+  //   Axios.get(`${API_URL}/carts`, {
+  //     params: {
+  //       userId: userId
+  //     }
+  //   })
+  //     .then((res) => {
+  //       res.data.map((val) => {
+  //         notification += val.quantity
+  //         dispatch(
+  //           {
+  //             type: ON_NOTIFICATION,
+  //             payload: notification
+  //           }
+  //         )
+  //       })
+  //       // dispatch(
+  //       //   {
+  //       //     type: ON_NOTIFICATION,
+  //       //     payload: notification
+  //       //   }
+  //       // )
+  //       console.log(res);
+
+  //     })
+  //     .catch((err) => {
+  //       console.log(err);
+
+  //     })
+  // }
+} 

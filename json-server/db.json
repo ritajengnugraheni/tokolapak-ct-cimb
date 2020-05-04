@@ -1,47 +1,25 @@
 {
   "users": [
     {
-      "username": "username",
-      "password": "password",
-      "id": 1
-    },
-    {
       "username": "ajeng",
       "password": "password",
       "fullName": "Rita Ajeng Nugarheni",
       "role": "admin",
       "email": "ajeng@gmail.com",
       "address": "Bandung",
+      "id": 1
+    },
+    {
+      "username": "username",
+      "password": "password",
+      "fullName": "full name",
+      "role": "User",
+      "email": "username@gmail.com",
+      "address": "Tangeranf Selatan",
       "id": 2
-    },
-    {
-      "username": "kunto",
-      "password": "password",
-      "fullName": "Sidik Kunto",
-      "address": "Balikpapan",
-      "role": "user",
-      "email": "kunto@gmail.com",
-      "id": 3
-    },
-    {
-      "username": "mulat",
-      "password": "password",
-      "fullName": "Mulat Wening",
-      "address": "Bekasi",
-      "role": "user",
-      "email": "mulat@gmail.com",
-      "id": 4
     }
   ],
   "products": [
-    {
-      "productName": "iPhone 7 Plus",
-      "price": 5000000,
-      "category": "Phone",
-      "image": "https://ibox.co.id/media/wysiwyg/PromoOnline/web-banner---iphone-7-plus-rev.png",
-      "desc": "HP Terbaikk loh",
-      "id": 1
-    },
     {
       "productName": "iPad Pro 3",
       "price": 15000000,
@@ -55,88 +33,132 @@
       "price": 20000000,
       "category": "Laptop",
       "image": "https://ibox.co.id/media/catalog/product/cache/3/image/9df78eab33525d08d6e5fb8d27136e95/m/b/mbp15touch-silver-select-cto-201807_3_1.jpeg",
-      "desc": "HP Terbaikk loh",
+      "desc": "ini leptop",
       "id": 3
-    },
-    {
-      "productName": "samsung",
-      "price": "200000",
-      "category": "Desktop",
-      "image": "https://4.imimg.com/data4/JT/KI/MY-12480947/samsung-desktop-computer-500x500-500x500.jpg",
-      "desc": "Menarique berbeda sendiri",
-      "id": 6
     }
   ],
   "carts": [
     {
-      "userId": 1,
-      "productId": 1,
+      "userId": 2,
+      "productId": 2,
       "quantity": 1,
       "id": 1
-    },
-    {
-      "userId": 3,
-      "productId": 1,
-      "quantity": 1,
-      "id": 2
     }
   ],
   "transactions": [
     {
-      "userId": 2,
-      "totalPrice": 10000000,
+      "userId": 1,
+      "totalprice": 55000000,
       "status": "pending",
-      "items": [
-        {
-          "productName": "iPhone 7 +",
-          "price": 5000000,
-          "category": "Tab",
-          "image": "https://ibox.co.id/media/wysiwyg/PromoOnline/web-banner---iphone-7-plus-rev.png",
-          "desc": "HP Terbaikk loh",
-          "id": 1
-        }
-      ],
+      "tgl_selesai": "",
+      "tgl_belanja": "4-Mei-2020",
+      "pengiriman": "Bandung",
+      "metodePembayaran": "Credit",
       "id": 1
     },
     {
       "userId": 1,
-      "totalprice": 30000000,
+      "totalprice": 90000000,
       "status": "pending",
-      "items": [
-        {
-          "productName": "iPhone 7 Plus",
-          "price": 5000000,
-          "category": "Phone",
-          "image": "https://ibox.co.id/media/wysiwyg/PromoOnline/web-banner---iphone-7-plus-rev.png",
-          "desc": "HP Terbaikk loh",
-          "id": 1
-        },
-        {
-          "productName": "iPad Pro 3",
-          "price": 15000000,
-          "category": "Tab",
-          "image": "https://ibox.co.id/media/catalog/product/cache/3/image/9df78eab33525d08d6e5fb8d27136e95/i/p/ipad-pro-11-select-cell-spacegray-201810.png",
-          "desc": "HP Terbaikk loh",
-          "id": 2
-        }
-      ],
+      "tgl_selesai": "",
+      "tgl_belanja": "4-Mei-2020",
+      "pengiriman": "Bandung",
+      "metodePembayaran": "Credit",
       "id": 2
     },
     {
       "userId": 1,
-      "totalprice": 5000000,
+      "totalprice": 90000000,
       "status": "pending",
-      "items": [
-        {
-          "productName": "iPhone 7 Plus",
-          "price": 5000000,
-          "category": "Phone",
-          "image": "https://ibox.co.id/media/wysiwyg/PromoOnline/web-banner---iphone-7-plus-rev.png",
-          "desc": "HP Terbaikk loh",
-          "id": 1
-        }
-      ],
+      "tgl_selesai": "",
+      "tgl_belanja": "4-Mei-2020",
+      "pengiriman": "Bandung",
+      "metodePembayaran": "Credit",
       "id": 3
+    },
+    {
+      "userId": 1,
+      "totalprice": 90000000,
+      "status": "pending",
+      "tgl_selesai": "",
+      "tgl_belanja": "4-Mei-2020",
+      "pengiriman": "Bandung",
+      "metodePembayaran": "Credit",
+      "id": 4
+    }
+  ],
+  "transactionDetails": [
+    {
+      "transactionId": 1,
+      "productId": 3,
+      "price": 20000000,
+      "quantity": 2,
+      "totalPriceProduct": 40000000,
+      "productName": "iPad Pro 3",
+      "id": 1
+    },
+    {
+      "transactionId": 1,
+      "productId": 3,
+      "price": 20000000,
+      "quantity": 2,
+      "totalPriceProduct": 40000000,
+      "productName": "Macbook Pro 5",
+      "id": 2
+    },
+    {
+      "transactionId": 2,
+      "productId": 2,
+      "price": 15000000,
+      "quantity": 2,
+      "totalPriceProduct": 30000000,
+      "productName": "iPad Pro 3",
+      "id": 3
+    },
+    {
+      "transactionId": 2,
+      "productId": 3,
+      "price": 20000000,
+      "quantity": 3,
+      "totalPriceProduct": 60000000,
+      "productName": "Macbook Pro 5",
+      "id": 4
+    },
+    {
+      "transactionId": 3,
+      "productId": 2,
+      "price": 15000000,
+      "quantity": 2,
+      "totalPriceProduct": 30000000,
+      "productName": "iPad Pro 3",
+      "id": 5
+    },
+    {
+      "transactionId": 3,
+      "productId": 3,
+      "price": 20000000,
+      "quantity": 3,
+      "totalPriceProduct": 60000000,
+      "productName": "Macbook Pro 5",
+      "id": 6
+    },
+    {
+      "transactionId": 4,
+      "productId": 2,
+      "price": 15000000,
+      "quantity": 2,
+      "totalPriceProduct": 30000000,
+      "productName": "iPad Pro 3",
+      "id": 7
+    },
+    {
+      "transactionId": 4,
+      "productId": 3,
+      "price": 20000000,
+      "quantity": 3,
+      "totalPriceProduct": 60000000,
+      "productName": "Macbook Pro 5",
+      "id": 8
     }
   ]
 }
