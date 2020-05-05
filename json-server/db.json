@@ -275,6 +275,30 @@
       "metodePembayaran": "Credit",
       "paket": "50000",
       "id": 16
+    },
+    {
+      "userId": 1,
+      "username": "ajeng",
+      "totalprice": null,
+      "status": "pending",
+      "tgl_selesai": "",
+      "tgl_belanja": "5/5/2020, 5:11:23 PM",
+      "pengiriman": "Bandung",
+      "metodePembayaran": "Credit",
+      "paket": 100000,
+      "id": 17
+    },
+    {
+      "userId": 1,
+      "username": "ajeng",
+      "totalprice": 5100000,
+      "status": "pending",
+      "tgl_selesai": "",
+      "tgl_belanja": "5/5/2020, 5:12:47 PM",
+      "pengiriman": "Bandung",
+      "metodePembayaran": "Debit",
+      "paket": 100000,
+      "id": 18
     }
   ],
   "transactionDetails": [
@@ -447,6 +471,26 @@
       "productName": "iPad Pro 3",
       "userId": 1,
       "id": 23
+    },
+    {
+      "transactionId": 17,
+      "productId": 2,
+      "price": 15000000,
+      "quantity": 1,
+      "totalPriceProduct": 15000000,
+      "productName": "iPad Pro 3",
+      "userId": 1,
+      "id": 24
+    },
+    {
+      "transactionId": 18,
+      "productId": 1,
+      "price": 5000000,
+      "quantity": 1,
+      "totalPriceProduct": 5000000,
+      "productName": "iPhone 7 +",
+      "userId": 1,
+      "id": 25
     }
   ],
   "wishlists": [

@@ -24,7 +24,8 @@ class Cart extends React.Component {
         metodePembayaran: "Credit",
         quantity: 0,
         productName: "",
-        paket: parseInt("")
+        paket: parseInt("100000"),
+        checkoutItems: []
 
     }
 
@@ -215,6 +216,19 @@ class Cart extends React.Component {
             );
         });
     }
+    checkoutHandler = (e, idx) => {
+        const { checked } = e.target;
+
+        if (checked) {
+            this.setState({ checkoutItems: [...this.state.checkoutItems, idx] })
+        } else {
+            this.setState({
+                checkoutItems: [
+                    ...this.state.checkoutItems.filter((val) => val !== idx)
+                ]
+            })
+        }
+    }
     render() {
         return (
             <div className="container py-4">
@@ -258,6 +272,22 @@ class Cart extends React.Component {
 
                                 </select>
                                 <h6>Pilih paket pengiriman</h6>
+                                {/* <input type="checkbox"
+                                    onChange={(e) => this.checkoutHandler(e, 100000)}
+                                    className=""
+                                />{" "} instant
+                                <input type="checkbox"
+                                    onChange={(e) => this.checkoutHandler(e, 50000)}
+                                    className=""
+                                />{" "}Some Day
+                                <input type="checkbox"
+                                    onChange={(e) => this.checkoutHandler(e, 20000)}
+                                    className=""
+                                />{" "}Express
+                                <input type="checkbox"
+                                    onChange={(e) => this.checkoutHandler(e, 0)}
+                                    className=""
+                                />{" "}Ekonomi */}
                                 <select
                                     value={this.state.paket}
                                     onChange={(e) => this.inputHandler(e, "paket")}
