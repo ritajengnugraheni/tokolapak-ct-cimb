@@ -17,9 +17,53 @@
       "email": "username@gmail.com",
       "address": "Tangeranf Selatan",
       "id": 2
+    },
+    {
+      "username": "kuntob",
+      "password": "password",
+      "fullName": "sidik kunto",
+      "role": "admin",
+      "email": "kunto@gmail.com",
+      "address": "Balik papan",
+      "id": 3
+    },
+    {
+      "username": "agus",
+      "password": "agus",
+      "fullName": "Agus Sidik m",
+      "role": "user",
+      "email": "agus@gmail.com",
+      "address": "Jakarta Selatan",
+      "id": 4
+    },
+    {
+      "username": "kayla",
+      "fullName": "Kayla Esha",
+      "password": "password",
+      "email": "kayla@gmail.com",
+      "qty": 0,
+      "role": "user",
+      "id": 5
+    },
+    {
+      "username": "kacang",
+      "fullName": "kacang garuda",
+      "password": "password",
+      "email": "kacang@gmail.com",
+      "qty": 0,
+      "role": "user",
+      "id": 6
     }
   ],
   "products": [
+    {
+      "productName": "iPhone 7 +",
+      "price": 5000000,
+      "category": "Tab",
+      "image": "https://ibox.co.id/media/wysiwyg/PromoOnline/web-banner---iphone-7-plus-rev.png",
+      "desc": "HP Terbaikk loh",
+      "id": 1
+    },
     {
       "productName": "iPad Pro 3",
       "price": 15000000,
@@ -29,136 +73,402 @@
       "id": 2
     },
     {
-      "productName": "Macbook Pro 5",
+      "productName": "Macbook Pro",
       "price": 20000000,
       "category": "Laptop",
       "image": "https://ibox.co.id/media/catalog/product/cache/3/image/9df78eab33525d08d6e5fb8d27136e95/m/b/mbp15touch-silver-select-cto-201807_3_1.jpeg",
-      "desc": "ini leptop",
+      "desc": "HP Terbaikk loh",
       "id": 3
+    },
+    {
+      "name": "iMac (2019)",
+      "price": "23000000",
+      "category": "Desktop",
+      "image": "https://ibox.co.id/media/catalog/product/cache/3/image/9df78eab33525d08d6e5fb8d27136e95/i/m/imac-27-cto-hero-201903_1_1.jpeg",
+      "desc": "Desktop khusus para sultan gan.",
+      "id": 4,
+      "productName": "iMac (2019)"
+    },
+    {
+      "productName": "iPhone 11 Pro Max",
+      "price": "24000000",
+      "category": "",
+      "image": "https://ibox.co.id/media/catalog/product/cache/3/image/9df78eab33525d08d6e5fb8d27136e95/i/p/iphone-11-pro-max-midnight-green_3.png",
+      "desc": "HP ne larang tenan",
+      "id": 5
+    },
+    {
+      "productName": "iPhone 11 Max abis",
+      "price": "123123123",
+      "category": "Phone",
+      "image": "https://ibox.co.id/media/catalog/product/cache/3/image/9df78eab33525d08d6e5fb8d27136e95/i/p/iphone-11-pro-max-midnight-green_3.png",
+      "desc": "asdasdasdsd",
+      "id": 6
+    },
+    {
+      "productName": "iPhone Max bet",
+      "price": "3132312",
+      "category": "Phone",
+      "image": "https://ibox.co.id/media/catalog/product/cache/3/image/9df78eab33525d08d6e5fb8d27136e95/i/p/iphone-11-pro-max-midnight-green_3.png",
+      "desc": "asdasdasdadadad",
+      "id": 7
+    },
+    {
+      "productName": "iPad 7 ",
+      "price": "6000000",
+      "category": "Tab",
+      "image": "https://ibox.co.id/media/catalog/product/cache/3/image/9df78eab33525d08d6e5fb8d27136e95/i/p/ipad-wifi-select-space-201909_geo_us.png",
+      "desc": "iPad baru",
+      "id": 8
+    },
+    {
+      "productName": "OPPO Find X2 Pro",
+      "price": "5300000",
+      "category": "Phone",
+      "image": "https://image.oppo.com/content/dam/oppo/id/mkt/header/Compass-Pro%20orange-EN.png",
+      "desc": "Keluaran terbaru dari OPPO guys, STOCK TERBATAS!!",
+      "id": 9
     }
   ],
   "carts": [
     {
-      "userId": 2,
+      "userId": 6,
       "productId": 2,
       "quantity": 1,
       "id": 1
+    },
+    {
+      "userId": 6,
+      "productId": 1,
+      "quantity": 2,
+      "id": 2
     }
   ],
   "transactions": [
     {
-      "userId": 1,
-      "totalprice": 55000000,
-      "status": "pending",
-      "tgl_selesai": "",
-      "tgl_belanja": "4-Mei-2020",
-      "pengiriman": "Bandung",
+      "userId": 2,
+      "totalprice": 30000000,
+      "status": "done",
+      "tgl_selesai": "5/5/2020, 10:30:47 AM",
+      "tgl_belanja": "5/5/2020, 7:00:52 AM",
+      "pengiriman": "Tangeranf Selatan",
       "metodePembayaran": "Credit",
-      "id": 1
+      "id": 5
     },
     {
       "userId": 1,
-      "totalprice": 90000000,
+      "totalprice": 35000000,
       "status": "pending",
       "tgl_selesai": "",
-      "tgl_belanja": "4-Mei-2020",
+      "tgl_belanja": "5/5/2020, 10:49:33 AM",
       "pengiriman": "Bandung",
       "metodePembayaran": "Credit",
-      "id": 2
+      "id": 6
     },
     {
       "userId": 1,
-      "totalprice": 90000000,
-      "status": "pending",
-      "tgl_selesai": "",
-      "tgl_belanja": "4-Mei-2020",
+      "totalprice": 25000000,
+      "status": "done",
+      "tgl_selesai": "5/5/2020, 11:00:47 AM",
+      "tgl_belanja": "5/5/2020, 11:00:21 AM",
       "pengiriman": "Bandung",
       "metodePembayaran": "Credit",
-      "id": 3
+      "id": 7
+    },
+    {
+      "userId": 4,
+      "totalprice": 5000000,
+      "status": "pending",
+      "tgl_selesai": "",
+      "tgl_belanja": "5/5/2020, 11:15:09 AM",
+      "pengiriman": "Jakarta Selatan",
+      "metodePembayaran": "Credit",
+      "id": 8
+    },
+    {
+      "userId": 5,
+      "totalprice": "10813231250000",
+      "status": "pending",
+      "tgl_selesai": "",
+      "tgl_belanja": "5/5/2020, 1:28:04 PM",
+      "metodePembayaran": "Credit",
+      "paket": "50000",
+      "id": 9
     },
     {
       "userId": 1,
-      "totalprice": 90000000,
+      "totalprice": "20000000100000",
       "status": "pending",
       "tgl_selesai": "",
-      "tgl_belanja": "4-Mei-2020",
+      "tgl_belanja": "5/5/2020, 1:34:04 PM",
       "pengiriman": "Bandung",
       "metodePembayaran": "Credit",
-      "id": 4
+      "paket": "100000",
+      "id": 10
+    },
+    {
+      "userId": 1,
+      "totalprice": 5000000,
+      "status": "pending",
+      "tgl_selesai": "",
+      "tgl_belanja": "5/5/2020, 1:37:06 PM",
+      "pengiriman": "Bandung",
+      "metodePembayaran": "Credit",
+      "paket": "100000",
+      "id": 11
+    },
+    {
+      "userId": 1,
+      "totalprice": 5100000,
+      "status": "done",
+      "tgl_selesai": "5/5/2020, 1:57:17 PM",
+      "tgl_belanja": "5/5/2020, 1:39:27 PM",
+      "pengiriman": "Bandung",
+      "metodePembayaran": "Credit",
+      "paket": 100000,
+      "id": 12
+    },
+    {
+      "userId": 1,
+      "username": "ajeng",
+      "totalprice": 5100000,
+      "status": "done",
+      "tgl_selesai": "5/5/2020, 1:44:00 PM",
+      "tgl_belanja": "5/5/2020, 1:43:48 PM",
+      "pengiriman": "Bandung",
+      "metodePembayaran": "Credit",
+      "paket": 100000,
+      "id": 13
+    },
+    {
+      "userId": 1,
+      "username": "ajeng",
+      "totalprice": 5100000,
+      "status": "pending",
+      "tgl_selesai": "",
+      "tgl_belanja": "5/5/2020, 4:25:26 PM",
+      "pengiriman": "Bandung",
+      "metodePembayaran": "Credit",
+      "paket": "20000",
+      "id": 14
+    },
+    {
+      "userId": 1,
+      "username": "ajeng",
+      "totalprice": null,
+      "status": "done",
+      "tgl_selesai": "5/5/2020, 4:30:21 PM",
+      "tgl_belanja": "5/5/2020, 4:30:01 PM",
+      "pengiriman": "Bandung",
+      "metodePembayaran": "Credit",
+      "paket": "20000",
+      "id": 15
+    },
+    {
+      "userId": 1,
+      "username": "ajeng",
+      "totalprice": 15000000,
+      "status": "pending",
+      "tgl_selesai": "",
+      "tgl_belanja": "5/5/2020, 4:34:14 PM",
+      "pengiriman": "Bandung",
+      "metodePembayaran": "Credit",
+      "paket": "50000",
+      "id": 16
     }
   ],
   "transactionDetails": [
     {
-      "transactionId": 1,
-      "productId": 3,
-      "price": 20000000,
-      "quantity": 2,
-      "totalPriceProduct": 40000000,
-      "productName": "iPad Pro 3",
-      "id": 1
-    },
-    {
-      "transactionId": 1,
-      "productId": 3,
-      "price": 20000000,
-      "quantity": 2,
-      "totalPriceProduct": 40000000,
-      "productName": "Macbook Pro 5",
-      "id": 2
-    },
-    {
-      "transactionId": 2,
+      "transactionId": 5,
       "productId": 2,
       "price": 15000000,
       "quantity": 2,
       "totalPriceProduct": 30000000,
       "productName": "iPad Pro 3",
-      "id": 3
-    },
-    {
-      "transactionId": 2,
-      "productId": 3,
-      "price": 20000000,
-      "quantity": 3,
-      "totalPriceProduct": 60000000,
-      "productName": "Macbook Pro 5",
-      "id": 4
-    },
-    {
-      "transactionId": 3,
-      "productId": 2,
-      "price": 15000000,
-      "quantity": 2,
-      "totalPriceProduct": 30000000,
-      "productName": "iPad Pro 3",
-      "id": 5
-    },
-    {
-      "transactionId": 3,
-      "productId": 3,
-      "price": 20000000,
-      "quantity": 3,
-      "totalPriceProduct": 60000000,
-      "productName": "Macbook Pro 5",
-      "id": 6
-    },
-    {
-      "transactionId": 4,
-      "productId": 2,
-      "price": 15000000,
-      "quantity": 2,
-      "totalPriceProduct": 30000000,
-      "productName": "iPad Pro 3",
+      "userId": 2,
       "id": 7
     },
     {
-      "transactionId": 4,
+      "transactionId": 6,
+      "productId": 2,
+      "price": 15000000,
+      "quantity": 1,
+      "totalPriceProduct": 15000000,
+      "productName": "iPad Pro 3",
+      "userId": 1,
+      "id": 8
+    },
+    {
+      "transactionId": 6,
+      "productId": 3,
+      "price": 20000000,
+      "quantity": 1,
+      "totalPriceProduct": 20000000,
+      "productName": "Macbook Pro",
+      "userId": 1,
+      "id": 9
+    },
+    {
+      "transactionId": 7,
+      "productId": 2,
+      "price": 15000000,
+      "quantity": 1,
+      "totalPriceProduct": 15000000,
+      "productName": "iPad Pro 3",
+      "userId": 1,
+      "id": 10
+    },
+    {
+      "transactionId": 7,
+      "productId": 1,
+      "price": 5000000,
+      "quantity": 2,
+      "totalPriceProduct": 10000000,
+      "productName": "iPhone 7 +",
+      "userId": 1,
+      "id": 11
+    },
+    {
+      "transactionId": 8,
+      "productId": 1,
+      "price": 5000000,
+      "quantity": 1,
+      "totalPriceProduct": 5000000,
+      "productName": "iPhone 7 +",
+      "userId": 4,
+      "id": 12
+    },
+    {
+      "transactionId": 9,
+      "productId": 2,
+      "price": 15000000,
+      "quantity": 3,
+      "totalPriceProduct": 45000000,
+      "productName": "iPad Pro 3",
+      "userId": 5,
+      "id": 13
+    },
+    {
+      "transactionId": 9,
       "productId": 3,
       "price": 20000000,
       "quantity": 3,
       "totalPriceProduct": 60000000,
-      "productName": "Macbook Pro 5",
-      "id": 8
+      "productName": "Macbook Pro",
+      "userId": 5,
+      "id": 14
+    },
+    {
+      "transactionId": 9,
+      "productId": 7,
+      "price": "3132312",
+      "quantity": 1,
+      "totalPriceProduct": 3132312,
+      "productName": "iPhone Max bet",
+      "userId": 5,
+      "id": 15
+    },
+    {
+      "transactionId": 10,
+      "productId": 2,
+      "price": 15000000,
+      "quantity": 1,
+      "totalPriceProduct": 15000000,
+      "productName": "iPad Pro 3",
+      "userId": 1,
+      "id": 16
+    },
+    {
+      "transactionId": 10,
+      "productId": 1,
+      "price": 5000000,
+      "quantity": 1,
+      "totalPriceProduct": 5000000,
+      "productName": "iPhone 7 +",
+      "userId": 1,
+      "id": 17
+    },
+    {
+      "transactionId": 11,
+      "productId": 1,
+      "price": 5000000,
+      "quantity": 1,
+      "totalPriceProduct": 5000000,
+      "productName": "iPhone 7 +",
+      "userId": 1,
+      "id": 18
+    },
+    {
+      "transactionId": 12,
+      "productId": 1,
+      "price": 5000000,
+      "quantity": 1,
+      "totalPriceProduct": 5000000,
+      "productName": "iPhone 7 +",
+      "userId": 1,
+      "id": 19
+    },
+    {
+      "transactionId": 13,
+      "productId": 1,
+      "price": 5000000,
+      "quantity": 1,
+      "totalPriceProduct": 5000000,
+      "productName": "iPhone 7 +",
+      "userId": 1,
+      "id": 20
+    },
+    {
+      "transactionId": 14,
+      "productId": 1,
+      "price": 5000000,
+      "quantity": 1,
+      "totalPriceProduct": 5000000,
+      "productName": "iPhone 7 +",
+      "userId": 1,
+      "id": 21
+    },
+    {
+      "transactionId": 15,
+      "productId": 2,
+      "price": 15000000,
+      "quantity": 1,
+      "totalPriceProduct": 15000000,
+      "productName": "iPad Pro 3",
+      "userId": 1,
+      "id": 22
+    },
+    {
+      "transactionId": 16,
+      "productId": 2,
+      "price": 15000000,
+      "quantity": 1,
+      "totalPriceProduct": 15000000,
+      "productName": "iPad Pro 3",
+      "userId": 1,
+      "id": 23
+    }
+  ],
+  "wishlists": [
+    {
+      "userId": 1,
+      "productId": 2,
+      "id": 1
+    },
+    {
+      "userId": 2,
+      "productId": 3,
+      "id": 3
+    },
+    {
+      "userId": 1,
+      "productId": 1,
+      "id": 4
+    },
+    {
+      "userId": 4,
+      "productId": 1,
+      "id": 5
     }
   ]
 }

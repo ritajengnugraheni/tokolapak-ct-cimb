@@ -194,8 +194,8 @@ class Home extends React.Component {
 
   renderProducts = () => {
     return this.state.bestSellerData.map((val) => {
-      const { productName } = val
-      if (productName.toLowerCase().includes(this.props.user.searchInput.toLowerCase())) {
+      const { productName, category } = val
+      if (productName.toLowerCase().includes(this.props.user.searchInput.toLowerCase()) || category.toLowerCase().includes(this.props.user.searchInput.toLowerCase())) {
         return (
           <Link to={`/product/${val.id}`}>
             <ProductCard key={`bestseller-${val.id}`} data={val} className="m-2" />

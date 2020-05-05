@@ -19,31 +19,32 @@ class Cart extends React.Component {
         userId: 0,
         status: "pending",
         tgl_selesai: "",
-        tgl_belanja: "",
+        tgl_belanja: new Date().toLocaleString(),
         pengiriman: "",
         metodePembayaran: "Credit",
         quantity: 0,
         productName: "",
+        paket: parseInt("")
 
     }
 
-    getDate = () => {
-        let arrbulan = ["Januari", "Februari", "Maret", "April", "Mei", "Juni", "Juli", "Agustus", "September", "Oktober", "November", "Desember"]
-        let tanggal = new Date().getDate()
-        let bulan = new Date().getMonth()
-        let tahun = new Date().getFullYear()
+    // getDate = () => {
+    //     let arrbulan = ["Januari", "Februari", "Maret", "April", "Mei", "Juni", "Juli", "Agustus", "September", "Oktober", "November", "Desember"]
+    //     let tanggal = new Date().getDate()
+    //     let bulan = new Date().getMonth()
+    //     let tahun = new Date().getFullYear()
 
-        let hasil = tanggal + "-" + arrbulan[bulan] + "-" + tahun
-        this.setState({
-            tgl_belanja: hasil
-        })
+    //     let hasil = tanggal + "-" + arrbulan[bulan] + "-" + tahun
+    //     this.setState({
+    //         tgl_belanja: hasil
+    //     })
 
-    }
+    // }
 
     componentDidMount() {
         // this.getDataCart()
         this.getDataCart2()
-        this.getDate()
+        // this.getDate()
     }
 
     inputHandler = (e, field) => {
@@ -73,6 +74,7 @@ class Cart extends React.Component {
 
     getDataCart2 = () => {
         let subTotal = 0
+        let fix = 0
         Axios.get(`${API_URL}/carts`, {
             params: {
                 userId: this.props.user.id,
@@ -82,11 +84,11 @@ class Cart extends React.Component {
             .then((res) => {
                 res.data.map((val) => {
                     subTotal += val.quantity * val.product.price
-
+                    fix = subTotal + this.state.paket
                 })
                 this.setState({
                     listProductCart: res.data,
-                    subTotalFix: subTotal,
+                    subTotalFix: fix,
                 })
                 console.log(res.data);
 
@@ -120,12 +122,14 @@ class Cart extends React.Component {
                 console.log(res.data);
                 Axios.post(`${API_URL}/transactions`, {
                     userId: this.props.user.id,
+                    username: this.props.user.username,
                     totalprice: this.state.subTotalFix,
                     status: this.state.status,
                     tgl_selesai: this.state.tgl_selesai,
-                    tgl_belanja: this.state.tgl_belanja,
+                    tgl_belanja: new Date().toLocaleString(),
                     pengiriman: this.props.user.address,
                     metodePembayaran: this.state.metodePembayaran,
+                    paket: this.state.paket
                 })
                     .then((res) => {
                         this.state.listProductCart.map((val) => {
@@ -136,6 +140,7 @@ class Cart extends React.Component {
                                 quantity: val.quantity,
                                 totalPriceProduct: val.product.price * val.quantity,
                                 productName: val.product.productName,
+                                userId: this.props.user.id
                             })
                                 .then((res) => {
                                     console.log(res);
@@ -252,18 +257,28 @@ class Cart extends React.Component {
                                     <option value="Transfer">Transfer Bank</option>
 
                                 </select>
+                                <h6>Pilih paket pengiriman</h6>
+                                <select
+                                    value={this.state.paket}
+                                    onChange={(e) => this.inputHandler(e, "paket")}
+                                >
+                                    <option value="100000">Instant</option>
+                                    <option value="50000">Some Day</option>
+                                    <option value="20000">Express</option>
+                                    <option value="0">Ekonomi</option>
 
+                                </select>
                             </div>
                             <center>
                                 <h6 className="d-flex flex-row totalFix">Total price : {this.totalprice()} </h6>
                                 <ButtonUI onClick={() => this.postTransactionHandler()}>Buat Pesanan</ButtonUI>
                             </center>
-                        </div>
+                        </div >
 
 
                     ) : (
                             <Alert className="alert-info">Pesanan Anda sedang kami proses silahkan lihat history {' '}
-                                <Link to="/">History</Link>
+                                <Link to="/history">History</Link>
                             </Alert>
                         )
                 }

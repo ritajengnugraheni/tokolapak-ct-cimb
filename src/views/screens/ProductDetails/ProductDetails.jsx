@@ -23,6 +23,42 @@ class ProductDetails extends React.Component {
 
   };
 
+  addToWishListHandler = () => {
+    // POST method ke /cart
+    // Isinya: userId, productId, quantity
+    // console.log(this.props.user.id);
+    // console.log(this.state.productData.id);
+    Axios.get(`${API_URL}/wishlists`, {
+      params: {
+        userId: this.props.user.id,
+        productId: this.state.productData.id,
+      }
+    })
+      .then((res) => {
+        if (res.data.length == 0) {
+          Axios.post(`${API_URL}/wishlists`, {
+            userId: this.props.user.id,
+            productId: this.state.productData.id
+          })
+            .then((res) => {
+              console.log(res);
+              swal("Add to wishlist", "", "success");
+            })
+            .catch((err) => {
+              console.log(err);
+
+            })
+
+        } else {
+          return swal("sorry!", "This product all ready in your wishlist", "warning");
+        }
+        console.log(res);
+
+      })
+      .catch((err) => {
+        console.log(err);
+      })
+  }
   addToCartHandler = () => {
     Axios.get(`${API_URL}/carts`, {
       params: {
@@ -31,7 +67,6 @@ class ProductDetails extends React.Component {
       }
     })
       .then((res) => {
-        // this.props.NotificationHandler(this.props.user.id)
         if (res.data.length == 0) {
           Axios.post(`${API_URL}/carts`, {
             userId: this.props.user.id,
@@ -40,6 +75,8 @@ class ProductDetails extends React.Component {
           })
             .then((res) => {
               console.log(res);
+              // const { qty } = this.props.user
+              // this.props.NotificationHandler(res.data.id, qty + 1)
               swal("", "Your item has been add to your cart", "success")
             })
             .catch((err) => {
@@ -51,6 +88,8 @@ class ProductDetails extends React.Component {
             quantity: res.data[0].quantity + 1,
           })
             .then((res) => {
+              // const { qty } = this.props.user
+              // this.props.NotificationHandler(res.data.id, qty + 1)
               console.log(res);
               swal("", "Your item has been add to your cart", "success")
             })
@@ -109,7 +148,7 @@ class ProductDetails extends React.Component {
             {/* <TextField type="number" placeholder="Quantity" className="mt-3" /> */}
             <div className="d-flex flex-row mt-4">
               <ButtonUI onClick={this.addToCartHandler}>Add To Cart</ButtonUI>
-              <ButtonUI className="ml-4" type="outlined">
+              <ButtonUI className="ml-4" type="outlined" onClick={this.addToWishListHandler}>
                 Add To Wishlist
               </ButtonUI>
             </div>

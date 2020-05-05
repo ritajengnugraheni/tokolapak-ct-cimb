@@ -18,7 +18,7 @@ class MemberScreen extends React.Component {
             username: "",
             password: "",
             fullName: "",
-            role: "Admin",
+            role: "",
             email: "",
             address: "",
         },
@@ -313,8 +313,8 @@ class MemberScreen extends React.Component {
                                     className="custom-text-input h-100 pl-3"
                                     onChange={(e) => this.inputHandler(e, "role", "editMember")}
                                 >
-                                    <option value="Phone">Admin</option>
-                                    <option value="Tab">User</option>
+                                    <option value="admin">Admin</option>
+                                    <option value="user">User</option>
                                 </select>
                             </div>
                             <div className="col-6 mt-3">

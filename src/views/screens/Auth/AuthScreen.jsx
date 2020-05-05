@@ -24,6 +24,7 @@ class AuthScreen extends React.Component {
       email: "",
       password: "",
       showPassword: false,
+      qty: 0
     },
   };
 
@@ -53,12 +54,13 @@ class AuthScreen extends React.Component {
   };
 
   registerBtnHandler = () => {
-    const { username, fullName, password, email } = this.state.registerForm;
+    const { username, fullName, password, email, qty } = this.state.registerForm;
     let newUser = {
       username,
       fullName,
       password,
       email,
+      qty,
     };
 
     this.props.onRegister(newUser);
@@ -158,11 +160,12 @@ class AuthScreen extends React.Component {
             onChange={(e) => this.inputHandler(e, "password", "loginForm")}
             placeholder="Password"
             className="mt-2"
+            type="password"
           />
           <div className="d-flex justify-content-center">
             <ButtonUI
-              onClick={this.loginBtnHandler}
               type="contained"
+              onClick={this.loginBtnHandler}
               className="mt-4"
             >
               Login

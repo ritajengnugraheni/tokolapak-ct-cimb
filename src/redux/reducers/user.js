@@ -12,13 +12,13 @@ const init_state = {
   cookieChecked: false,
   searchInput: "",
   email: "",
-  notif: 0
+  qty: 5
 };
 
 export default (state = init_state, action) => {
   switch (action.type) {
     case ON_LOGIN_SUCCESS:
-      const { username, fullName, role, id, address, email } = action.payload;
+      const { username, fullName, role, id, address, email, qty } = action.payload;
       return {
         ...state,
         username,
@@ -27,6 +27,7 @@ export default (state = init_state, action) => {
         role,
         id,
         email,
+        qty,
         cookieChecked: true,
       };
     case ON_LOGIN_FAIL:
@@ -40,7 +41,7 @@ export default (state = init_state, action) => {
     case ON_SEARCHFILTER_SUCCESS:
       return { ...state, cookieChecked: true, searchInput: action.payload }
     case ON_NOTIFICATION:
-      return { ...state, cookieChecked: true, notif: action.payload }
+      return { ...state, cookieChecked: true, qty: action.payload }
     default:
       return { ...state };
   }

@@ -119,7 +119,30 @@ export const SearchAndFilterHandler = (text) => {
   }
 }
 
-export const NotificationHandler = (userId) => {
+export const NotificationHandler = (userId, qtyInput) => {
+
+  // return (dispatch) => {
+  //   Axios.get(`${API_URL}/users`, {
+  //     params: {
+  //       userId: userId
+  //     }
+  //   })
+  //     .then((res) => {
+  //       Axios.patch(`${API_URL}/users/${res.data.id}`, {
+  //         qty: qtyInput
+  //       })
+  //       dispatch({
+  //         text: ON_NOTIFICATION,
+  //         payload: qtyInput,
+  //       })
+  //       console.log(res);
+
+  //     })
+  //     .catch((err) => {
+  //       console.log(err);
+
+  //     })
+  // }
   // let notification = 1
   // return (dispatch) => {
   //   Axios.get(`${API_URL}/carts`, {
