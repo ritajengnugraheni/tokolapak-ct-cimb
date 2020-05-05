@@ -24,7 +24,7 @@ class Cart extends React.Component {
         metodePembayaran: "Credit",
         quantity: 0,
         productName: "",
-        paket: parseInt("100000"),
+        paket: 0,
         checkoutItems: []
 
     }
@@ -75,7 +75,6 @@ class Cart extends React.Component {
 
     getDataCart2 = () => {
         let subTotal = 0
-        let fix = 0
         Axios.get(`${API_URL}/carts`, {
             params: {
                 userId: this.props.user.id,
@@ -85,11 +84,10 @@ class Cart extends React.Component {
             .then((res) => {
                 res.data.map((val) => {
                     subTotal += val.quantity * val.product.price
-                    fix = subTotal + this.state.paket
                 })
                 this.setState({
                     listProductCart: res.data,
-                    subTotalFix: fix,
+                    subTotalFix: subTotal,
                 })
                 console.log(res.data);
 
@@ -102,6 +100,7 @@ class Cart extends React.Component {
 
 
     postTransactionHandler = () => {
+        let totalSemua = parseInt(this.state.subTotalFix) + parseInt(this.state.paket)
         Axios.get(`${API_URL}/carts`, {
             params: {
                 userId: this.props.user.id,
@@ -124,7 +123,7 @@ class Cart extends React.Component {
                 Axios.post(`${API_URL}/transactions`, {
                     userId: this.props.user.id,
                     username: this.props.user.username,
-                    totalprice: this.state.subTotalFix,
+                    totalprice: totalSemua,
                     status: this.state.status,
                     tgl_selesai: this.state.tgl_selesai,
                     tgl_belanja: new Date().toLocaleString(),
@@ -292,10 +291,10 @@ class Cart extends React.Component {
                                     value={this.state.paket}
                                     onChange={(e) => this.inputHandler(e, "paket")}
                                 >
-                                    <option value="100000">Instant</option>
-                                    <option value="50000">Some Day</option>
-                                    <option value="20000">Express</option>
-                                    <option value="0">Ekonomi</option>
+                                    <option value={100000} >Instant</option>
+                                    <option value={50000}>Some Day</option>
+                                    <option value={20000}>Express</option>
+                                    <option value={0}>Ekonomi</option>
 
                                 </select>
                             </div>

@@ -32,6 +32,7 @@ class Navbar extends React.Component {
     notifikasi: 0,
     user: [],
     barang: [],
+    tampil: 0,
   };
 
   inputHandler = (e, field) => {
@@ -69,7 +70,8 @@ class Navbar extends React.Component {
         })
         console.log(res);
         this.setState({
-          notifikasi: notif
+          notifikasi: notif,
+          tampil: res.data.length
         })
       })
       .catch((err) => {
@@ -78,6 +80,7 @@ class Navbar extends React.Component {
       })
     this.getBarangUnik()
   }
+
   getBarangUnik = () => {
     Axios.get(`${API_URL}/carts`, {
       params: {
@@ -254,7 +257,8 @@ class Navbar extends React.Component {
         </div>
         <div className="d-flex justify-content-center flex-row align-items-center my-1">
 
-          {this.renderBarangUnik()} {""}
+          {/* {this.renderBarangUnik()} {""} */}
+          {this.state.tampil}
 
         </div>
 

@@ -37,22 +37,12 @@
       "id": 4
     },
     {
-      "username": "kayla",
-      "fullName": "Kayla Esha",
-      "password": "password",
-      "email": "kayla@gmail.com",
-      "qty": 0,
-      "role": "user",
-      "id": 5
-    },
-    {
       "username": "kacang",
       "fullName": "kacang garuda",
       "password": "password",
       "email": "kacang@gmail.com",
-      "qty": 0,
       "role": "user",
-      "id": 6
+      "id": 5
     }
   ],
   "products": [
@@ -132,176 +122,148 @@
   ],
   "carts": [
     {
-      "userId": 6,
-      "productId": 2,
-      "quantity": 1,
-      "id": 1
-    },
-    {
-      "userId": 6,
+      "userId": 1,
       "productId": 1,
       "quantity": 2,
-      "id": 2
+      "id": 1
     }
   ],
   "transactions": [
     {
-      "userId": 2,
+      "userId": 1,
+      "username": "ajeng",
+      "totalprice": 10050000,
+      "status": "done",
+      "tgl_selesai": "5/5/2020, 7:17:19 PM",
+      "tgl_belanja": "5/5/2020, 7:08:46 PM",
+      "pengiriman": "Bandung",
+      "metodePembayaran": "Credit",
+      "paket": "50000",
+      "id": 1
+    },
+    {
+      "userId": 3,
+      "username": "kuntob",
+      "totalprice": 35020000,
+      "status": "done",
+      "tgl_selesai": "5/5/2020, 7:18:58 PM",
+      "tgl_belanja": "5/5/2020, 7:18:15 PM",
+      "pengiriman": "Balik papan",
+      "metodePembayaran": "Credit",
+      "paket": "20000",
+      "id": 2
+    },
+    {
+      "userId": 1,
+      "username": "ajeng",
+      "totalprice": 5000000,
+      "status": "done",
+      "tgl_selesai": "5/5/2020, 7:42:02 PM",
+      "tgl_belanja": "5/5/2020, 7:31:52 PM",
+      "pengiriman": "Bandung",
+      "metodePembayaran": "Credit",
+      "paket": 0,
+      "id": 3
+    },
+    {
+      "userId": 1,
+      "username": "ajeng",
+      "totalprice": 5050000,
+      "status": "done",
+      "tgl_selesai": "5/5/2020, 8:27:23 PM",
+      "tgl_belanja": "5/5/2020, 7:47:58 PM",
+      "pengiriman": "Bandung",
+      "metodePembayaran": "Credit",
+      "paket": "50000",
+      "id": 4
+    },
+    {
+      "userId": 5,
+      "username": "kacang",
       "totalprice": 30000000,
       "status": "done",
-      "tgl_selesai": "5/5/2020, 10:30:47 AM",
-      "tgl_belanja": "5/5/2020, 7:00:52 AM",
-      "pengiriman": "Tangeranf Selatan",
+      "tgl_selesai": "5/5/2020, 9:28:55 PM",
+      "tgl_belanja": "5/5/2020, 9:28:24 PM",
       "metodePembayaran": "Credit",
+      "paket": 0,
       "id": 5
     },
     {
       "userId": 1,
-      "totalprice": 35000000,
+      "username": "ajeng",
+      "totalprice": 123123123,
       "status": "pending",
       "tgl_selesai": "",
-      "tgl_belanja": "5/5/2020, 10:49:33 AM",
+      "tgl_belanja": "5/5/2020, 10:38:42 PM",
       "pengiriman": "Bandung",
       "metodePembayaran": "Credit",
+      "paket": 0,
       "id": 6
     },
     {
       "userId": 1,
-      "totalprice": 25000000,
-      "status": "done",
-      "tgl_selesai": "5/5/2020, 11:00:47 AM",
-      "tgl_belanja": "5/5/2020, 11:00:21 AM",
+      "username": "ajeng",
+      "totalprice": 10020000,
+      "status": "pending",
+      "tgl_selesai": "",
+      "tgl_belanja": "5/5/2020, 11:31:30 PM",
       "pengiriman": "Bandung",
       "metodePembayaran": "Credit",
+      "paket": "20000",
       "id": 7
-    },
-    {
-      "userId": 4,
-      "totalprice": 5000000,
-      "status": "pending",
-      "tgl_selesai": "",
-      "tgl_belanja": "5/5/2020, 11:15:09 AM",
-      "pengiriman": "Jakarta Selatan",
-      "metodePembayaran": "Credit",
-      "id": 8
-    },
-    {
-      "userId": 5,
-      "totalprice": "10813231250000",
-      "status": "pending",
-      "tgl_selesai": "",
-      "tgl_belanja": "5/5/2020, 1:28:04 PM",
-      "metodePembayaran": "Credit",
-      "paket": "50000",
-      "id": 9
-    },
-    {
-      "userId": 1,
-      "totalprice": "20000000100000",
-      "status": "pending",
-      "tgl_selesai": "",
-      "tgl_belanja": "5/5/2020, 1:34:04 PM",
-      "pengiriman": "Bandung",
-      "metodePembayaran": "Credit",
-      "paket": "100000",
-      "id": 10
-    },
-    {
-      "userId": 1,
-      "totalprice": 5000000,
-      "status": "pending",
-      "tgl_selesai": "",
-      "tgl_belanja": "5/5/2020, 1:37:06 PM",
-      "pengiriman": "Bandung",
-      "metodePembayaran": "Credit",
-      "paket": "100000",
-      "id": 11
-    },
-    {
-      "userId": 1,
-      "totalprice": 5100000,
-      "status": "done",
-      "tgl_selesai": "5/5/2020, 1:57:17 PM",
-      "tgl_belanja": "5/5/2020, 1:39:27 PM",
-      "pengiriman": "Bandung",
-      "metodePembayaran": "Credit",
-      "paket": 100000,
-      "id": 12
-    },
-    {
-      "userId": 1,
-      "username": "ajeng",
-      "totalprice": 5100000,
-      "status": "done",
-      "tgl_selesai": "5/5/2020, 1:44:00 PM",
-      "tgl_belanja": "5/5/2020, 1:43:48 PM",
-      "pengiriman": "Bandung",
-      "metodePembayaran": "Credit",
-      "paket": 100000,
-      "id": 13
-    },
-    {
-      "userId": 1,
-      "username": "ajeng",
-      "totalprice": 5100000,
-      "status": "pending",
-      "tgl_selesai": "",
-      "tgl_belanja": "5/5/2020, 4:25:26 PM",
-      "pengiriman": "Bandung",
-      "metodePembayaran": "Credit",
-      "paket": "20000",
-      "id": 14
-    },
-    {
-      "userId": 1,
-      "username": "ajeng",
-      "totalprice": null,
-      "status": "done",
-      "tgl_selesai": "5/5/2020, 4:30:21 PM",
-      "tgl_belanja": "5/5/2020, 4:30:01 PM",
-      "pengiriman": "Bandung",
-      "metodePembayaran": "Credit",
-      "paket": "20000",
-      "id": 15
-    },
-    {
-      "userId": 1,
-      "username": "ajeng",
-      "totalprice": 15000000,
-      "status": "pending",
-      "tgl_selesai": "",
-      "tgl_belanja": "5/5/2020, 4:34:14 PM",
-      "pengiriman": "Bandung",
-      "metodePembayaran": "Credit",
-      "paket": "50000",
-      "id": 16
-    },
-    {
-      "userId": 1,
-      "username": "ajeng",
-      "totalprice": null,
-      "status": "pending",
-      "tgl_selesai": "",
-      "tgl_belanja": "5/5/2020, 5:11:23 PM",
-      "pengiriman": "Bandung",
-      "metodePembayaran": "Credit",
-      "paket": 100000,
-      "id": 17
-    },
-    {
-      "userId": 1,
-      "username": "ajeng",
-      "totalprice": 5100000,
-      "status": "pending",
-      "tgl_selesai": "",
-      "tgl_belanja": "5/5/2020, 5:12:47 PM",
-      "pengiriman": "Bandung",
-      "metodePembayaran": "Debit",
-      "paket": 100000,
-      "id": 18
     }
   ],
   "transactionDetails": [
+    {
+      "transactionId": 1,
+      "productId": 1,
+      "price": 5000000,
+      "quantity": 2,
+      "totalPriceProduct": 10000000,
+      "productName": "iPhone 7 +",
+      "userId": 1,
+      "id": 1
+    },
+    {
+      "transactionId": 2,
+      "productId": 1,
+      "price": 5000000,
+      "quantity": 1,
+      "totalPriceProduct": 5000000,
+      "productName": "iPhone 7 +",
+      "userId": 3,
+      "id": 2
+    },
+    {
+      "transactionId": 2,
+      "productId": 2,
+      "price": 15000000,
+      "quantity": 2,
+      "totalPriceProduct": 30000000,
+      "productName": "iPad Pro 3",
+      "userId": 3,
+      "id": 3
+    },
+    {
+      "transactionId": 3,
+      "productId": 1,
+      "price": 5000000,
+      "quantity": 1,
+      "totalPriceProduct": 5000000,
+      "productName": "iPhone 7 +",
+      "userId": 1,
+      "id": 4
+    },
+    {
+      "transactionId": 4,
+      "productId": 1,
+      "price": 5000000,
+      "quantity": 1,
+      "totalPriceProduct": 5000000,
+      "productName": "iPhone 7 +",
+      "userId": 1,
+      "id": 5
+    },
     {
       "transactionId": 5,
       "productId": 2,
@@ -309,38 +271,18 @@
       "quantity": 2,
       "totalPriceProduct": 30000000,
       "productName": "iPad Pro 3",
-      "userId": 2,
+      "userId": 5,
+      "id": 6
+    },
+    {
+      "transactionId": 6,
+      "productId": 6,
+      "price": "123123123",
+      "quantity": 1,
+      "totalPriceProduct": 123123123,
+      "productName": "iPhone 11 Max abis",
+      "userId": 1,
       "id": 7
-    },
-    {
-      "transactionId": 6,
-      "productId": 2,
-      "price": 15000000,
-      "quantity": 1,
-      "totalPriceProduct": 15000000,
-      "productName": "iPad Pro 3",
-      "userId": 1,
-      "id": 8
-    },
-    {
-      "transactionId": 6,
-      "productId": 3,
-      "price": 20000000,
-      "quantity": 1,
-      "totalPriceProduct": 20000000,
-      "productName": "Macbook Pro",
-      "userId": 1,
-      "id": 9
-    },
-    {
-      "transactionId": 7,
-      "productId": 2,
-      "price": 15000000,
-      "quantity": 1,
-      "totalPriceProduct": 15000000,
-      "productName": "iPad Pro 3",
-      "userId": 1,
-      "id": 10
     },
     {
       "transactionId": 7,
@@ -350,147 +292,7 @@
       "totalPriceProduct": 10000000,
       "productName": "iPhone 7 +",
       "userId": 1,
-      "id": 11
-    },
-    {
-      "transactionId": 8,
-      "productId": 1,
-      "price": 5000000,
-      "quantity": 1,
-      "totalPriceProduct": 5000000,
-      "productName": "iPhone 7 +",
-      "userId": 4,
-      "id": 12
-    },
-    {
-      "transactionId": 9,
-      "productId": 2,
-      "price": 15000000,
-      "quantity": 3,
-      "totalPriceProduct": 45000000,
-      "productName": "iPad Pro 3",
-      "userId": 5,
-      "id": 13
-    },
-    {
-      "transactionId": 9,
-      "productId": 3,
-      "price": 20000000,
-      "quantity": 3,
-      "totalPriceProduct": 60000000,
-      "productName": "Macbook Pro",
-      "userId": 5,
-      "id": 14
-    },
-    {
-      "transactionId": 9,
-      "productId": 7,
-      "price": "3132312",
-      "quantity": 1,
-      "totalPriceProduct": 3132312,
-      "productName": "iPhone Max bet",
-      "userId": 5,
-      "id": 15
-    },
-    {
-      "transactionId": 10,
-      "productId": 2,
-      "price": 15000000,
-      "quantity": 1,
-      "totalPriceProduct": 15000000,
-      "productName": "iPad Pro 3",
-      "userId": 1,
-      "id": 16
-    },
-    {
-      "transactionId": 10,
-      "productId": 1,
-      "price": 5000000,
-      "quantity": 1,
-      "totalPriceProduct": 5000000,
-      "productName": "iPhone 7 +",
-      "userId": 1,
-      "id": 17
-    },
-    {
-      "transactionId": 11,
-      "productId": 1,
-      "price": 5000000,
-      "quantity": 1,
-      "totalPriceProduct": 5000000,
-      "productName": "iPhone 7 +",
-      "userId": 1,
-      "id": 18
-    },
-    {
-      "transactionId": 12,
-      "productId": 1,
-      "price": 5000000,
-      "quantity": 1,
-      "totalPriceProduct": 5000000,
-      "productName": "iPhone 7 +",
-      "userId": 1,
-      "id": 19
-    },
-    {
-      "transactionId": 13,
-      "productId": 1,
-      "price": 5000000,
-      "quantity": 1,
-      "totalPriceProduct": 5000000,
-      "productName": "iPhone 7 +",
-      "userId": 1,
-      "id": 20
-    },
-    {
-      "transactionId": 14,
-      "productId": 1,
-      "price": 5000000,
-      "quantity": 1,
-      "totalPriceProduct": 5000000,
-      "productName": "iPhone 7 +",
-      "userId": 1,
-      "id": 21
-    },
-    {
-      "transactionId": 15,
-      "productId": 2,
-      "price": 15000000,
-      "quantity": 1,
-      "totalPriceProduct": 15000000,
-      "productName": "iPad Pro 3",
-      "userId": 1,
-      "id": 22
-    },
-    {
-      "transactionId": 16,
-      "productId": 2,
-      "price": 15000000,
-      "quantity": 1,
-      "totalPriceProduct": 15000000,
-      "productName": "iPad Pro 3",
-      "userId": 1,
-      "id": 23
-    },
-    {
-      "transactionId": 17,
-      "productId": 2,
-      "price": 15000000,
-      "quantity": 1,
-      "totalPriceProduct": 15000000,
-      "productName": "iPad Pro 3",
-      "userId": 1,
-      "id": 24
-    },
-    {
-      "transactionId": 18,
-      "productId": 1,
-      "price": 5000000,
-      "quantity": 1,
-      "totalPriceProduct": 5000000,
-      "productName": "iPhone 7 +",
-      "userId": 1,
-      "id": 25
+      "id": 8
     }
   ],
   "wishlists": [
@@ -498,21 +300,6 @@
       "userId": 1,
       "productId": 2,
       "id": 1
-    },
-    {
-      "userId": 2,
-      "productId": 3,
-      "id": 3
-    },
-    {
-      "userId": 1,
-      "productId": 1,
-      "id": 4
-    },
-    {
-      "userId": 4,
-      "productId": 1,
-      "id": 5
     }
   ]
 }

@@ -211,6 +211,7 @@ class AdminPaymentScreen extends React.Component {
                                                 <tr>
                                                     <th>ID</th>
                                                     <th>Product Name</th>
+                                                    <th>Quantity</th>
                                                     <th>Total</th>
                                                 </tr>
                                             </thead>
@@ -221,6 +222,7 @@ class AdminPaymentScreen extends React.Component {
                                                             <tr>
                                                                 <td>{value.transactionId}</td>
                                                                 <td>{value.productName}</td>
+                                                                <td>{value.quantity}</td>
                                                                 <td> <span style={{ fontWeight: "normal" }}>
                                                                     {" "}
                                                                     {new Intl.NumberFormat("id-ID", {

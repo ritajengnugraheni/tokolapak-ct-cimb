@@ -24,7 +24,7 @@ class AuthScreen extends React.Component {
       email: "",
       password: "",
       showPassword: false,
-      qty: 0
+
     },
   };
 
@@ -60,7 +60,7 @@ class AuthScreen extends React.Component {
       fullName,
       password,
       email,
-      qty,
+
     };
 
     this.props.onRegister(newUser);
