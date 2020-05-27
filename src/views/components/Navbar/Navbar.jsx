@@ -144,6 +144,7 @@ class Navbar extends React.Component {
                     toggle={this.toggleDropdown}
                     isOpen={this.state.dropdownOpen}
                   >
+
                     <DropdownToggle tag="div" className="d-flex">
                       <FontAwesomeIcon icon={faUser} style={{ fontSize: 24 }} />
                       <p className="small ml-3 mr-4">{this.props.user.username}</p>
